@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" styleClass="main-bg" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prilogenie.Reg_Log.Login" stylesheets="@../styles.css">
+    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <image>
+            <Image url="@../../../../icons/Zbus.png"/>
+        </image>
+    </ImageView>
+    <StackPane alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" maxWidth="450.0" maxHeight="-Infinity" spacing="20.0" styleClass="card-block">
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+            </padding>
+            <VBox alignment="CENTER" spacing="5.0">
+                <Label text="Zbus" styleClass="text-header"/>
+                <Label text="Расписание т/с" styleClass="text-label" style="-fx-text-fill: #cccccc;"/>
+            </VBox>
+            <VBox spacing="15.0">
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Авторизация" styleClass="text-label"/>
+                <Label text="Email или Логин:" styleClass="text-label"/>
+                <TextField fx:id="loginFld" promptText="Введите ваш email или логин" styleClass="text-field"/>
+                <Label text="Пароль:" styleClass="text-label"/>
+                <StackPane>
+                    <PasswordField fx:id="passFld" promptText="Введите пароль" styleClass="password-field"/>
+                    <TextField fx:id="visiblePassFld" promptText="Введите пароль" visible="false" styleClass="text-field"/>
+                    <ToggleButton fx:id="toggleBtn" text="👁" StackPane.alignment="CENTER_RIGHT" styleClass="eye-btn"/>
+                </StackPane>
+                <Label fx:id="errorLbl" text="Ошибка: Неверные данные" visible="false" wrapText="true" styleClass="text-label" style="-fx-text-fill: #ff4444;"/>
+                <Button onAction="#handleLogin" prefHeight="45.0" maxWidth="1.7976931348623157E308" text="Войти" styleClass="btn-green, btn-lg">
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                </Button>
+                <VBox alignment="CENTER" spacing="5.0">
+                    <Label onMouseClicked="#handleRegister" text="Зарегистрироваться" styleClass="text-label" style="-fx-cursor: hand; -fx-text-fill: white;"/>
+                </VBox>
+            </VBox>
+        </VBox>
+    </StackPane>
+</AnchorPane>

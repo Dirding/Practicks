@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prilogenie.Manager.RouteStop.Dialogroutestop" prefWidth="1000" prefHeight="650" styleClass="main-bg" stylesheets="@../../styles.css">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25"/>
+    </padding>
+    <children>
+        <HBox spacing="15" alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="70" VBox.vgrow="NEVER">
+            <ComboBox fx:id="dirBox" prefWidth="180" maxWidth="Infinity" styleClass="combo-box"/>
+            <ComboBox fx:id="stopCombo" promptText="Выберите остановку" prefWidth="400" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="combo-box"/>
+            <Button text="Добавить" onAction="#handleAdd" prefWidth="140" prefHeight="50" styleClass="btn-green, btn-lg"/>
+        </HBox>
+        <TableView fx:id="table" VBox.vgrow="ALWAYS" prefHeight="350" maxHeight="400" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="orderCol" text="№" prefWidth="60"/>
+                <TableColumn fx:id="nameCol" text="Остановка" prefWidth="400"/>
+                <TableColumn fx:id="actCol" text="" prefWidth="50" maxWidth="50" minWidth="50"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <HBox spacing="25" alignment="CENTER" prefHeight="60" VBox.vgrow="NEVER">
+            <Button text="▲ Вверх" onAction="#handleUp" prefWidth="140" prefHeight="40" styleClass="btn-orange, btn-lg"/>
+            <Button text="▼ Вниз" onAction="#handleDown" prefWidth="140" prefHeight="40" styleClass="btn-orange, btn-lg"/>
+        </HBox>
+        <HBox spacing="25" alignment="CENTER" maxWidth="Infinity" prefHeight="60" VBox.vgrow="NEVER">
+            <Button text="Сохранить" onAction="#handleSave" prefWidth="200" prefHeight="40" styleClass="btn-green, btn-lg"/>
+            <Button text="Отмена" onAction="#handleCancel" prefWidth="200" prefHeight="40" styleClass="btn-red, btn-lg"/>
+        </HBox>
+        <Region prefHeight="5" VBox.vgrow="NEVER"/>
+    </children>
+</VBox>

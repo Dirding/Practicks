@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.prilogenie.Manager.Vehicle.VehicleManager" BorderPane.alignment="CENTER" styleClass="main-bg" stylesheets="@../../styles.css">
+    <top>
+        <StackPane styleClass="card-block">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </padding>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Label text="Управление транспортом" styleClass="text-header"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <HBox spacing="10.0">
+                    <Button onAction="#handleAdd" text="+ Добавить" styleClass="btn-green, btn-lg"/>
+                    <Button onAction="#handleRefresh" text="🔄 Обновить список" styleClass="btn-blue, btn-lg"/>
+                </HBox>
+            </HBox>
+        </StackPane>
+    </top>
+    <center>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+            <TableView fx:id="table" VBox.vgrow="ALWAYS" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="numCol" text="Гос. номер"/>
+                    <TableColumn fx:id="capCol" text="Вместимость"/>
+                    <TableColumn fx:id="statusCol" text="Статус" visible="false"/>
+                    <TableColumn fx:id="typeCol" text="Тип"/>
+                    <TableColumn fx:id="routeCol" text="№ маршрута"/>
+                    <TableColumn fx:id="actCol" text="Действия"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prilogenie.User.Transport"
+            styleClass="main-bg" stylesheets="@../styles.css">
+    <fx:define>
+        <ToggleGroup fx:id="viewGroup"/>
+        <ToggleGroup fx:id="typeGroup"/>
+    </fx:define>
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0">
+        <left>
+            <VBox spacing="10.0" styleClass="card-block" style="-fx-border-width: 0 1 0 0;">
+                <padding>
+                    <Insets bottom="20.0" top="20.0" left="15.0" right="15.0"/>
+                </padding>
+                <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../../icons/Zbus.png"/>
+                        <VBox.margin>
+                            <Insets bottom="20.0" top="10.0"/>
+                        </VBox.margin>
+                    </ImageView>
+                </HBox>
+                <Button onMouseClicked="#handleAccount" prefHeight="50.0" prefWidth="220.0"
+                        styleClass="btn-lg, btn-green, btn-oval" text="Аккаунт">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                                   smooth="false">
+                            <Image url="@../../../../images/Account.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ToggleButton fx:id="catalogBtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0"
+                              selected="true" text="Поиск / Каталог" toggleGroup="$viewGroup"
+                              styleClass="btn-lg, btn-green">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                                   smooth="false">
+                            <Image url="@../../../../images/Catalog.png"/>
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
+                <ToggleButton fx:id="plannerBtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0"
+                              text="Планировщик" toggleGroup="$viewGroup" styleClass="btn-lg, btn-green">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                                   smooth="false">
+                            <Image url="@../../../../images/Planner.png"/>
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
+                <Region VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </left>
+        <center>
+            <StackPane fx:id="contentStackPane">
+                <BorderPane fx:id="catalogView">
+                    <top>
+                        <StackPane styleClass="card-block">
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                            </padding>
+                            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                <Label text="Поиск маршрутов" styleClass="text-label"/>
+                                <TextField fx:id="searchField" promptText="Найти маршрут или остановку"
+                                           HBox.hgrow="ALWAYS" maxWidth="400" prefWidth="300" styleClass="text-field"/>
+                            </HBox>
+                        </StackPane>
+                    </top>
+                    <center>
+                        <VBox spacing="15.0">
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                            </padding>
+                            <HBox fx:id="tagsHBox" alignment="CENTER_LEFT" spacing="10.0">
+                                <ToggleButton fx:id="allTag" selected="true" text="Все типы"
+                                              toggleGroup="$typeGroup" styleClass="toggle-button"/>
+                                <ToggleButton fx:id="busTag" text="Автобус" toggleGroup="$typeGroup"
+                                              styleClass="toggle-button"/>
+                                <ToggleButton fx:id="trolleyTag" text="Троллейбус" toggleGroup="$typeGroup"
+                                              styleClass="toggle-button"/>
+                                <ToggleButton fx:id="tramTag" text="Трамвай" toggleGroup="$typeGroup"
+                                              styleClass="toggle-button"/>
+                                <ToggleButton fx:id="trainTag" text="Поезд" toggleGroup="$typeGroup"
+                                              styleClass="toggle-button"/>
+                            </HBox>
+                            <ScrollPane fx:id="routesScrollPane" fitToWidth="true" hbarPolicy="NEVER"
+                                        VBox.vgrow="ALWAYS" styleClass="scroll-pane">
+                                <VBox fx:id="routesBox" spacing="10.0"/>
+                            </ScrollPane>
+                        </VBox>
+                    </center>
+                </BorderPane>
+                <VBox fx:id="plannerView" alignment="TOP_CENTER" spacing="20.0" visible="false">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                    </padding>
+                    <StackPane styleClass="card-block" maxWidth="800">
+                        <padding>
+                            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0"/>
+                        </padding>
+                        <VBox alignment="CENTER" spacing="15.0">
+                            <Label text="Планировщик поездки" styleClass="text-header"/>
+                            <HBox spacing="15.0" alignment="CENTER">
+                                <Label text="Откуда:" styleClass="text-label" minWidth="60"/>
+                                <ComboBox fx:id="stopACombo" promptText="Начальная остановка"
+                                          HBox.hgrow="ALWAYS" prefWidth="250" styleClass="combo-box"/>
+                            </HBox>
+                            <HBox spacing="15.0" alignment="CENTER">
+                                <Label text="Куда:" styleClass="text-label" minWidth="60"/>
+                                <ComboBox fx:id="stopBCombo" promptText="Конечная остановка"
+                                          HBox.hgrow="ALWAYS" prefWidth="250" styleClass="combo-box"/>
+                            </HBox>
+                            <Button onAction="#handleFindTrip" text="Найти маршрут" maxWidth="200"
+                                    styleClass="btn-orange, btn-lg"/>
+                        </VBox>
+                    </StackPane>
+                    <Label text="Результаты поиска:" styleClass="text-label" style="-fx-padding: 10 0 0 0;"/>
+                    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="scroll-pane"
+                                style="-fx-background-color: transparent;">
+                        <VBox fx:id="tripResultContainer" spacing="15.0">
+                        </VBox>
+                    </ScrollPane>
+                </VBox>
+            </StackPane>
+        </center>
+    </BorderPane>
+</AnchorPane>

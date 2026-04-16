@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.prilogenie.Manager.Vehicle.Dialogvehicle" hgap="15" vgap="15" alignment="CENTER" styleClass="main-bg" stylesheets="@../../styles.css">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="120" prefWidth="120"/>
+        <ColumnConstraints minWidth="200" prefWidth="250"/>
+    </columnConstraints>
+    <Label text="Гос. номер:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="text-label"/>
+    <TextField fx:id="numFld" promptText="А777БВ" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="text-field"/>
+    <Label text="Вместимость:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="text-label"/>
+    <TextField fx:id="capFld" promptText="30" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="text-field"/>
+    <Label text="Тип:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="text-label"/>
+    <ComboBox fx:id="typeCombo" promptText="Выберите тип" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="combo-box"/>
+    <Label text="Маршрут:" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="text-label"/>
+    <ComboBox fx:id="routeCombo" promptText="Без маршрута" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="combo-box"/>
+    <HBox spacing="20.0" alignment="CENTER" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <Button text="Сохранить" onAction="#handleSave" prefWidth="140" styleClass="btn-green, btn-lg"/>
+        <Button text="Отмена" onAction="#handleCancel" prefWidth="140" styleClass="btn-red, btn-lg"/>
+        <padding>
+            <Insets top="20.0" bottom="0.0" left="0.0" right="0.0"/>
+        </padding>
+    </HBox>
+</GridPane>

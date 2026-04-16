@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<HBox fx:id="root" alignment="CENTER_LEFT" spacing="15.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prilogenie.User.RouteCard" styleClass="card-block"
+      stylesheets="@../styles.css" style="-fx-cursor: hand;">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+    <ImageView fx:id="icon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../../images/Default.png"/>
+        </image>
+    </ImageView>
+    <VBox HBox.hgrow="ALWAYS">
+        <Label fx:id="numLabel" text="Маршрут №17" styleClass="text-label"/>
+        <Label fx:id="nameLabel" text="ул. Ленина - Аэропорт" style="-fx-text-fill: #cccccc;"/>
+    </VBox>
+    <Region HBox.hgrow="ALWAYS"/>
+</HBox>

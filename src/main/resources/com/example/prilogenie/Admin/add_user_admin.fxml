@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<VBox alignment="CENTER" spacing="15.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.example.prilogenie.Admin.AddUserAdmin"
+      minWidth="650" minHeight="500" prefWidth="650" prefHeight="500"
+      styleClass="main-bg"
+      stylesheets="@../styles.css">
+    <padding>
+        <Insets top="15" right="30" bottom="15" left="30"/>
+    </padding>
+    <Label text="Добавление нового пользователя" styleClass="text-header"/>
+    <GridPane hgap="15" vgap="12" prefWidth="600">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="180" minWidth="180"/>
+            <ColumnConstraints prefWidth="400" minWidth="400"/>
+        </columnConstraints>
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="text-label"/>
+        <TextField fx:id="emailFld" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Введите email (до 35 символов)" prefWidth="380" styleClass="text-field"/>
+        <Label text="Логин:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="text-label"/>
+        <TextField fx:id="loginFld" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Введите логин (до 20 символов)" prefWidth="380" styleClass="text-field"/>
+        <Label text="Роль:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="text-label"/>
+        <ComboBox fx:id="roleCombo" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="380" styleClass="combo-box"/>
+        <Label text="Пароль:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="text-label"/>
+        <PasswordField fx:id="passFld" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="Введите пароль (8-20 символов)" prefWidth="380" styleClass="password-field"/>
+        <Label text="Подтвердите пароль:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="text-label"/>
+        <PasswordField fx:id="confirmFld" GridPane.columnIndex="1" GridPane.rowIndex="4" promptText="Повторите ввод пароля" prefWidth="380" styleClass="password-field"/>
+        <Label text="Активен:" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="text-label"/>
+        <CheckBox fx:id="activeChk" styleClass="check-box" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    </GridPane>
+    <HBox alignment="CENTER" spacing="15.0" prefWidth="500">
+        <Button fx:id="saveBtn" onAction="#handleSave" text="Добавить" prefWidth="120" styleClass="btn-green, btn-lg"/>
+        <Button onAction="#handleCancel" text="Отмена" prefWidth="120" styleClass="btn-red, btn-lg"/>
+    </HBox>
+</VBox>

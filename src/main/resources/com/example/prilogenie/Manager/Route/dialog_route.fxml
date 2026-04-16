@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.prilogenie.Manager.Route.Dialogroute" hgap="15" vgap="15" alignment="CENTER" styleClass="main-bg" stylesheets="@../../styles.css">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="150" prefWidth="150"/>
+        <ColumnConstraints minWidth="250" prefWidth="350"/>
+    </columnConstraints>
+    <Label text="Номер маршрута:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="text-label"/>
+    <TextField fx:id="numFld" promptText="Например: 12" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="text-field"/>
+    <Label text="Тип маршрута:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="text-label"/>
+    <ComboBox fx:id="typeCombo" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="combo-box"/>
+    <Label text="Остановка А:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="text-label"/>
+    <ComboBox fx:id="stopACombo" promptText="Выберите начальную остановку" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="combo-box"/>
+    <Label text="Остановка Б:" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="text-label"/>
+    <ComboBox fx:id="stopBCombo" promptText="Выберите конечную остановку" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="combo-box"/>
+    <Label text="Стоимость:" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="text-label"/>
+    <TextField fx:id="costFld" promptText="0.0" GridPane.rowIndex="4" GridPane.columnIndex="1" styleClass="text-field"/>
+    <HBox spacing="20.0" alignment="CENTER" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <Button text="Сохранить" onAction="#handleSave" prefWidth="140" styleClass="btn-green, btn-lg"/>
+        <Button text="Отмена" onAction="#handleCancel" prefWidth="140" styleClass="btn-red, btn-lg"/>
+        <padding>
+            <Insets top="20.0" bottom="0.0" left="0.0" right="0.0"/>
+        </padding>
+    </HBox>
+</GridPane>

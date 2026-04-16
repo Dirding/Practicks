@@ -1,0 +1,142 @@
+/* Общий фон приложения */
+.main-bg {-fx-background-color: #1e1e1e;}
+
+/* Карточки/блоки */
+.card-block {-fx-background-color: #000000;-fx-background-radius: 10;-fx-border-color: #333333;-fx-border-radius: 10;}
+
+/* Текстовые заголовки*/
+.text-label {-fx-text-fill: white;-fx-font-size: 16px; -fx-font-weight: bold;}
+
+/* Главный заголовок*/
+.text-header {-fx-text-fill: #00ff88;-fx-font-size: 32px;-fx-font-weight: bold;}
+
+/* Поля ввода */
+.text-field, .password-field {-fx-background-color: #000000;-fx-border-color: #00ff88;-fx-border-width: 2;-fx-border-radius: 5;-fx-background-radius: 5;-fx-text-fill: white; -fx-font-size: 14px;-fx-padding: 8 10;-fx-prompt-text-fill: #666666;}
+.text-field:focused, .password-field:focused {-fx-border-color: #00ff88;-fx-effect: dropshadow(three-pass-box, rgba(0,255,136,0.3), 8, 0, 0, 0);}
+
+/* База для всех кнопок */
+.btn-lg {-fx-font-size: 14px;-fx-font-weight: bold; -fx-padding: 10 20;-fx-background-color: transparent;-fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;}
+
+/* Цвета кнопок */
+.btn-green {-fx-border-color: #00ff88;-fx-text-fill: #00ff88;}
+.btn-blue {-fx-border-color: #00aaff;-fx-text-fill: #00aaff;}
+.btn-orange {-fx-border-color: #ffaa00;-fx-text-fill: #ffaa00;}
+.btn-red {-fx-border-color: #ff4444;-fx-text-fill: #ff4444;}
+
+/* Эффекты наведения для кнопок */
+.btn-lg:hover {-fx-background-color: rgba(255,255,255,0.1);}
+.btn-green:hover {-fx-background-color: #00ff88;-fx-text-fill: #000000;}
+.btn-blue:hover {-fx-background-color: #00aaff;-fx-text-fill: #000000;}
+.btn-orange:hover {-fx-background-color: #ffaa00; -fx-text-fill: #000000;}
+.btn-red:hover {-fx-background-color: #ff4444;-fx-text-fill: #000000;}
+
+/* Таблица */
+.table-view {-fx-background-color: #000000; -fx-border-color: #333333; -fx-border-width: 0;}
+/* Заголовки таблицы */
+.table-view .column-header-background {-fx-background-color: #111111;}
+.table-view .column-header {-fx-background-color: #111111; -fx-border-color: #222222;-fx-border-width: 0 0 1 0; -fx-pref-height: 45;}
+.table-view .column-header .label { -fx-text-fill: #00ff88; -fx-font-size: 15px;-fx-font-weight: bold;-fx-alignment: CENTER;}
+/* Ячейки таблицы */
+.table-view .table-cell {-fx-border-width: 0;-fx-text-fill: white; -fx-alignment: CENTER; -fx-padding: 12 5; -fx-font-size: 14px;}
+/* Строки таблицы */
+.table-view .table-row-cell {-fx-background-color: #0a0a0a;-fx-border-color: #1e1e1e;-fx-border-width: 0 0 1 0;}
+.table-view .table-row-cell:odd { -fx-background-color: #080808;}
+/* Эффект наведения на строку */
+.table-view .table-row-cell:hover { -fx-background-color: #161616;-fx-cursor: default;}
+/* Ползунок в таблице */
+.table-view .scroll-bar:vertical {-fx-background-color: #0a0a0a;-fx-pref-width: 8;}
+/* Ползунок */
+.table-view .scroll-bar:vertical .thumb {-fx-background-color: #333333;-fx-background-radius: 5;}
+/* Подсветка при наведении на ползунок */
+.table-view .scroll-bar:vertical .thumb:hover {-fx-background-color: #00ff88;}
+/* Убираем кнопки и стрелки для ползунка */
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {-fx-background-color: transparent;-fx-padding: 0;}
+.table-view .scroll-bar .increment-arrow,
+.table-view .scroll-bar .decrement-arrow {-fx-shape: "";}
+.table-view .column-header-background .filler {-fx-background-color: #111111; -fx-border-color: #222222; -fx-border-width: 0 0 1 0;}
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {-fx-background-color: transparent;-fx-background-radius: 0; -fx-padding: 0; -fx-max-height: 0;-fx-max-width: 0;-fx-opacity: 0;}
+.table-view .table-row-cell:selected {-fx-background-color: #1e3a2a;}
+.table-view .table-row-cell:selected .table-cell { -fx-text-fill: #00ff88;}
+/* Стили для редактируемых ячеек таблицы */
+.table-view .table-cell:editing {-fx-background-color: #2a2a2a;-fx-text-fill: white;-fx-border-color: #00ff88; -fx-border-width: 1;}
+.table-view .text-field { -fx-background-color: #2a2a2a;-fx-text-fill: white; -fx-border-color: #00ff88;-fx-border-width: 1;-fx-background-radius: 3;}
+.table-view .table-cell { -fx-background-color: #0a0a0a;-fx-text-fill: white;}
+.table-view .table-row-cell:odd .table-cell {-fx-background-color: #080808;}
+.table-view .table-row-cell:selected .table-cell {-fx-background-color: #1e3a2a; -fx-text-fill: #00ff88;}
+/* CheckBox (галочка) */
+.table-view .check-box .box { -fx-background-color: #000000;-fx-border-color: #00ff88; -fx-border-radius: 3;-fx-border-width: 2;}
+.table-view .check-box:selected .mark { -fx-background-color: #00ff88;}
+
+/* Выпадающие списки */
+.combo-box {-fx-background-color: #000000; -fx-border-color: #00ff88; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #00ff88; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-height: 38;-fx-cursor: hand;}
+/* Кнопка-стрелка выпадающего списка */
+.combo-box .arrow-button {-fx-background-color: #000000;-fx-cursor: hand;}
+.combo-box .arrow-button .arrow {-fx-background-color: #00ff88;}
+/* Отображаемое значение */
+.combo-box .list-cell {-fx-text-fill: #00ff88;-fx-background-color: #000000; -fx-padding: 8 10; -fx-font-size: 14px; -fx-font-weight: bold;}
+/* Выпадающий список */
+.combo-box-popup .list-view {-fx-background-color: #000000;-fx-border-color: #00ff88; -fx-border-width: 1;}
+.combo-box-popup .list-view .list-cell { -fx-text-fill: #00ff88; -fx-background-color: #000000; -fx-padding: 8 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;}
+.combo-box-popup .list-view .list-cell:hover {-fx-background-color: #00ff88;-fx-text-fill: #000000; -fx-cursor: hand;}
+.combo-box-popup .list-view .list-cell:selected { -fx-background-color: #1e1e1e; -fx-text-fill: #00ff88; -fx-border-color: #00ff88; -fx-border-width: 0 0 0 3;}
+/* Стили для прокрутки в выпадающих списках */
+.combo-box-popup .list-view { -fx-background-color: #000000; -fx-border-color: #00ff88; -fx-border-width: 1;}
+.combo-box-popup .list-view .scroll-bar:vertical { -fx-background-color: #111111;-fx-background-radius: 5; -fx-pref-width: 12;}
+.combo-box-popup .list-view .scroll-bar:vertical .thumb {-fx-background-color: #00ff88; -fx-background-radius: 5;-fx-min-height: 30;}
+.combo-box-popup .list-view .scroll-bar:vertical .thumb:hover {-fx-background-color: #00cc66;}
+.combo-box-popup .list-view .scroll-bar:vertical .track {-fx-background-color: #222222;-fx-background-radius: 5;}
+.combo-box-popup .list-view .scroll-bar:vertical .track-background {-fx-background-color: #111111;}
+/* Убираем стрелки прокрутки в выпадающем списке */
+.combo-box-popup .list-view .scroll-bar .increment-button,
+.combo-box-popup .list-view .scroll-bar .decrement-button {-fx-background-color: transparent; -fx-padding: 0; -fx-opacity: 0; -fx-max-width: 0; -fx-max-height: 0;}
+.combo-box-popup .list-view .scroll-bar .increment-arrow,
+.combo-box-popup .list-view .scroll-bar .decrement-arrow {-fx-background-color: transparent;-fx-padding: 0;-fx-shape: null;}
+/* CheckBox (галочка) в формах */
+.check-box { -fx-text-fill: white;-fx-font-size: 14px;-fx-cursor: hand;}
+.check-box .box { -fx-background-color: #000000;-fx-border-color: #00ff88; -fx-border-width: 2;-fx-border-radius: 3;-fx-background-radius: 3;}
+.check-box:selected .mark {-fx-background-color: #00ff88;}
+.check-box:hover .box {-fx-border-color: #00ff88;-fx-effect: dropshadow(three-pass-box, rgba(0,255,136,0.3), 5, 0, 0, 0);}
+
+/* Стили для TabPane */
+.tab-pane { -fx-background-color: transparent; }
+.tab-pane .tab-header-area { -fx-background-color: transparent; -fx-padding: 5 0 0 0; }
+.tab-pane .tab-header-background { -fx-background-color: black; -fx-border-color: #333; -fx-border-width: 0 0 1 0; }
+.tab-pane .tab {-fx-background-color: transparent; -fx-padding: 10 20; -fx-border-width: 0; -fx-background-radius: 0;  -fx-cursor: hand;}
+.tab-pane .tab:focused {-fx-focus-color: transparent;-fx-faint-focus-color: transparent;}
+.tab-pane .tab .tab-label { -fx-text-fill: #888;  -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;}
+.tab-pane .tab:selected .tab-label,
+.tab-pane .tab:hover .tab-label { -fx-text-fill: #00ff88; }
+.tab-pane .tab:selected { -fx-border-color: #00ff88; -fx-border-width: 0 0 2 0; -fx-border-style: solid;}
+
+/* Кнопка удаления (крестик) */
+.route-stop-delete-label { -fx-text-fill: #ff4444;  -fx-font-size: 18px; -fx-font-weight: bold;  -fx-cursor: hand; -fx-padding: 0 5;}
+.route-stop-delete-label:hover { -fx-text-fill: #ff8888;-fx-effect: dropshadow(three-pass-box, rgba(255,68,68,0.5), 5, 0, 0, 0);}
+
+/* Стили для ScrollPane */
+.scroll-pane {-fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent;}
+.scroll-pane .viewport {-fx-background-color: transparent;}
+.scroll-pane .scroll-bar:vertical {-fx-background-color: #111111; -fx-pref-width: 12;}
+.scroll-pane .scroll-bar:vertical .thumb {-fx-background-color: #00ff88;-fx-background-radius: 5;}
+.scroll-pane .scroll-bar:vertical .thumb:hover { -fx-background-color: #00cc66;}
+.scroll-pane .scroll-bar:horizontal { -fx-background-color: #111111; -fx-pref-height: 12;}
+.scroll-pane .scroll-bar:horizontal .thumb {-fx-background-color: #00ff88; -fx-background-radius: 5;}
+.scroll-pane .scroll-bar:horizontal .thumb:hover { -fx-background-color: #00cc66;}
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {-fx-background-color: transparent; -fx-padding: 0;  -fx-opacity: 0;}
+
+/* Стили для вывода текста */
+.value-label { -fx-text-fill: white; -fx-font-size: 16px;  -fx-font-weight: bold;}
+
+/* Стили для ToggleButton */
+.toggle-button {-fx-background-color: #000000; -fx-border-color: #00ff88; -fx-text-fill: #00ff88; -fx-border-radius: 15; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 8 20;}
+.toggle-button:selected {-fx-background-color: #00ff88;-fx-text-fill: #000000;}
+
+/* Стили для глазика */
+.eye-btn {-fx-background-color: #000000; -fx-border-color: #00ff88; -fx-text-fill: #00ff88; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 5 12; -fx-font-size: 14px; -fx-min-width: 40; -fx-min-height: 30; -fx-cursor: hand;}
+.eye-btn:selected { -fx-background-color: #00ff88; -fx-text-fill: #000000;}
+.eye-btn:hover { -fx-background-color: rgba(0,255,136,0.2);}
+
+/* Стили для овальных кнопок */
+.btn-oval { -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 8 20;}
