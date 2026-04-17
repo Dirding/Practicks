@@ -66,6 +66,7 @@ src/main/resources/ <br>
 2.  Создайте новую базу данных с именем `Cursovay`.
 3.  Выполните SQL-скрипт из папки `sql/schema.sql` (если есть).
 4.  **Важно:** Проверьте/измените учетные данные в классе `com.example.prilogenie.Class.Database.java`:
+   
     ```java
     private static final String URL = "jdbc:postgresql://localhost:5432/Cursovay";
     private static final String USER = "postgres";
@@ -75,7 +76,7 @@ src/main/resources/ <br>
     
 ### Клонируйте репозиторий:
 
-git clone https://github.com/your-username/zbus.git <br>
+git clone https://github.com/Dirding/Practicks <br>
 cd zbus
 
 ### Запустите сборку и выполнение через Maven:
