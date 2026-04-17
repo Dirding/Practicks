@@ -71,6 +71,7 @@ public class TripPlanner { // Класс для поиска оптимальн�
         return results;
     }
 
+
     private static int getStopOrder(int routeId, String stopName, String direction) { // Получение порядка остановки
         String sql = "SELECT rs.stop_order FROM route_stops rs " +
                 "JOIN stops s ON rs.stop_id = s.stop_id " +

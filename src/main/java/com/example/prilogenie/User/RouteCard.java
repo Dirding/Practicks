@@ -44,6 +44,7 @@ public class RouteCard { // Контроллер карточки маршрут
         if (trainImg == null) trainImg = defaultImg;
     }
 
+
     public void setData(Route r, String stopA, String stopB, String type, Consumer<Route> listener) { // Заполнение карточки данными
         if (numLabel != null) numLabel.setText("Маршрут №" + r.getNumber());
         if (nameLabel != null) nameLabel.setText(stopA + " - " + stopB);

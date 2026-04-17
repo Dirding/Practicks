@@ -206,7 +206,6 @@ public class Transport implements Initializable { // Контроллер гла
         updateCards(filtered);
     }
 
-
     private void updateCards(List<Route> list) { // Обновление карточек маршрутов
         if (routesBox == null) return;
         Platform.runLater(() -> {
