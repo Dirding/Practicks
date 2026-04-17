@@ -24,6 +24,8 @@ public class TransportType { // Модель типа транспорта (ав
         };
     }
 
+
+
     public static String toRussian(String code) { // Преобразование кода в русское название
         if (code == null) return "Неизвестно";
         return switch (code.toUpperCase()) {

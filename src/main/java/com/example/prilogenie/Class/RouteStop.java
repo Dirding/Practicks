@@ -17,3 +17,4 @@ public class RouteStop { // Модель связи маршрута с оста
     public int getId() { return routeStopId; } // Геттер для совместимости с TableView
     public void setId(int id) { this.routeStopId = id; } // Сеттер для совместимости
 }
+
