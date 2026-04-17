@@ -123,6 +123,7 @@ public class Account implements Initializable { // Контроллер личн
         }
     }
 
+
     private void handleDelFav(Route r) { // Удаление из избранного
         Alert.showDeleteConfirm("маршрут №" + r.getNumber(), () -> {
             String sql = "DELETE FROM favorites WHERE user_id = ? AND route_id = ?";
