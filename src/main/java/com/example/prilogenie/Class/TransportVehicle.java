@@ -17,4 +17,3 @@ public class TransportVehicle { // Модель транспортного ср�
     public String getVehicleNumber() { return number; } // Геттер для получения номера ТС
     public void setVehicleNumber(String n) { this.number = n; } // Сеттер для установки номера
 }
-

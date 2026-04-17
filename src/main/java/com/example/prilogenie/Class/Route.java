@@ -16,4 +16,3 @@ public class Route { // Модель маршрута общественного
     private double cost; // Стоимость проезда
     private boolean active; // Статус активности маршрута
 }
-
