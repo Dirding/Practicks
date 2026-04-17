@@ -214,6 +214,7 @@ public class Admin implements Initializable { // Контроллер админ
         }
     }
 
+
     @FXML protected void handleStatistics() { // Метод получения статистики системы. Работа со сложными JOIN-запросами и агрегатными функциями
         try {
             String stats = String.format(

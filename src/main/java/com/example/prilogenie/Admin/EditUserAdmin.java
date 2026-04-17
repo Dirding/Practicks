@@ -26,6 +26,7 @@ public class EditUserAdmin { // Контроллер формы редактир
         });
     }
 
+
     public void setUserData(User u) { // Загрузка данных пользователя в форму
         this.curUser = u;
         emailFld.setText(u.getEmail());
